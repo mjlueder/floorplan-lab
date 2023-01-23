@@ -1,38 +1,58 @@
-.App {
-  text-align: center;
+div {
+  border: 1px solid grey;
+  /* margin: 5px; */
+  padding: 5px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bed {
+  background-color: cornflowerblue;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.bath {
+  background-color: aquamarine;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#floor-plan {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 25% 25% 25% 25%;
 }
 
-.App-link {
-  color: #61dafb;
+#bedroom-1 {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#living-room {
+  grid-column: 2 / 4;
+  grid-row: 3 / 5;
+  background-color: cornsilk;
 }
+
+#Full-bath, #bedroom-2 {
+  grid-row: 1 / 3;
+}
+
+#kitchen {
+  grid-row: 3 / 5;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 65% 35%;
+  padding: 0;
+  background-color:blanchedalmond
+}
+
+#oven {
+  grid-area: 2 / 1 / 3 / 2;
+  background-color: gray;
+}
+
+#sink {
+  grid-area: 2 / 2 / 3 / 3;
+  background-color: lightgray;
+}
+
+#sink > h4, #oven > h4 {
+  margin: 0;
+}
+
